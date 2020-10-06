@@ -11,18 +11,16 @@
      <meta property="og:url" content="http://www.asnet.co.kr">
      <title>Flex로 Layout구성하기3</title>
      <!-- header, side, footer, main CSS -->
-          <style>
+    <style>
          .container{
              display: flex; 
              height:600px; 
              width:100%; 
              flex-direction: column; 
              margin:0px;
-             
          }
-         .flex_item2{
+         .flex_item1{
             margin:0 auto;
-            border:1px solid blueviolet;
             border-radius: 5px;
             background-color: blueviolet;
             text-align: center;
@@ -30,7 +28,7 @@
             height: 200px;
             width:200px;
          }
-         .flex_item3{
+         .flex_item2{
             margin:0 auto;
             margin-top: auto;
             border-radius: 5px;
@@ -40,14 +38,13 @@
             height:200px;
             width:200px;
          }
-         
      </style>
 </head>
 <body>
     
     <div class="container">
-        <div class="flex_item2">DIV1</div>
-        <div class="flex_item3  ">DIV2</div>
+        <div class="flex_item1">DIV1</div>
+        <div class="flex_item2  ">DIV2</div>
     </div>
 </body>
 </html>
