@@ -1,1 +1,4 @@
-body{margin:0;padding:0}.wrapper{height:500px}.paragraph1{background:#76FF02;height:250px;float:left;width:50%}.paragraph2{background:#eeff00;height:250px;float:right;width:50%}.paragraph3{background:#02BBFF;height:500px}.contents{float:left;width:50%}@media screen and (max-width: 768px){.wrapper{height:540px}.sidebar{display:none}.contents{width:100%;height:100%}.contents-top{width:100%}.paragraph1{display:block;width:100%;height:150px;background-color:purple}.paragraph2{background-color:orange;height:150px;width:100%}.paragraph3{background-color:blue;width:100%;height:540px}}
+@import url("/src/main/resources/static/css/admin_footer.min.css");
+@import url("/src/main/resources/static/css/admin_header.min.css");
+@import url("/src/main/resources/static/css/admin_sidebar.min.css");
+
