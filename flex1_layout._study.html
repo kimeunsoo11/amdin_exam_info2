@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <!-- Meta Data -->
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="에즈넷">
+     <meta property="og:description" content="주식회사 에즈넷입니다.">
+     <meta property="og:image" content="/images/favicon_36x36.png">
+     <meta property="og:url" content="http://www.asnet.co.kr">
+     <title>Flex로 Layout구성하기1</title>
+     <!-- header, side, footer, main CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <style>
+         .containers{
+             display: flex; height:100%; width:100%;  flex-direction: column;
+         }
+         .flex_item1{
+            
+            margin: 0 auto;
+            justify-content:center;
+            height:200px;
+            width:200px;
+         }
+
+         .flex_item2{
+            border:1px solid blueviolet;
+            border-radius: 5px;
+            background-color: blueviolet;
+            text-align: center;
+            font-weight: bold;
+            margin: 0 auto;
+            justify-content:center;
+            height:200px;
+            width:200px;
+         }
+     </style>
+</head>
+<body>
+    <div class="containers">
+        <div class="flex_item1"></div>
+        <div class="flex_item2">DIV1</div>
+    </div>
+</body>
+</html>

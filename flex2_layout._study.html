@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <!-- Meta Data -->
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="에즈넷">
+     <meta property="og:description" content="주식회사 에즈넷입니다.">
+     <meta property="og:image" content="/images/favicon_36x36.png">
+     <meta property="og:url" content="http://www.asnet.co.kr">
+     <title>Flex로 Layout구성하기2</title>
+     <!-- header, side, footer, main CSS -->
+          <style>
+         .container{
+             display: flex; height:100%; width:100%; flex-direction: row;
+             margin:0px;
+             padding-top:15%;
+         }
+         .flex_item2{
+            margin-right: auto;
+            border:1px solid blueviolet;
+            border-radius: 5px;
+            background-color: blueviolet;
+            text-align: center;
+            font-weight: bold;
+            height: 200px;
+            width:200px;
+         }
+         .flex_item3{
+            margin-left: auto;
+            border-radius: 5px;
+            background-color: blueviolet;
+            text-align: center;
+            font-weight: bold;
+            height:200px;
+            width:200px;
+         }
+     </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="flex_item1"></div>
+        <div class="flex_item2">DIV1</div>
+        <div class="flex_item3  ">DIV2</div>
+    </div>
+</body>
+</html>
