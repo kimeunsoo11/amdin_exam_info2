@@ -17,6 +17,10 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar navbar-light pt-2 bg-light">
@@ -33,7 +37,12 @@
                 <a class="nav-link text-white" href="#"> 사용자관리 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#"> 시험정보관리 </a>
+                <a
+                  class="nav-link text-white"
+                  href="/admin_exam_info/admin_exam_info_list.html"
+                >
+                  시험정보관리
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#"> 시험문제관리 </a>
@@ -76,26 +85,44 @@
               <input type="text" class="form-control" name="subject" />
             </div>
             <div class="form-group">
-                <label for="description">시험내용</label>
-                <textarea class="form-control" name="description" rows="3" ></textarea>
-              </div>
+              <label for="description">시험내용</label>
+              <textarea
+                class="form-control"
+                name="description"
+                rows="3"
+              ></textarea>
+            </div>
             <div class="form-group">
               <label for="name">등록일</label>
-              <input type="text" class="form-control"value="2020-10-07" name="create_date" disabled/>
+              <input
+                type="text"
+                class="form-control"
+                value="2020-10-07"
+                name="create_date"
+                disabled
+              />
             </div>
           </form>
         </div>
-        <div class="btn-search-bar d-flex justify-content-between w-75 mr-5 p-3">
-            <button type="button" class="btn btn-dark m-1">수정</button>
-            <button type="button" class="btn btn-dark m-1">목록</button>
+        <div
+          class="btn-search-bar d-flex justify-content-between w-75 mr-5 p-3"
+        >
+          <button type="button" class="btn btn-dark m-1">수정</button>
+          <button
+            type="button"
+            class="btn btn-dark m-1"
+            onclick="javascript:history.back();"
+          >
+            목록
+          </button>
         </div>
       </div>
     </div>
     <!-- Footer -->
     <footer class="page-footer font-small bg-light pt-3">
       <div class="footer-copyright text-center py-3 bg-light">
-        주식회사 에즈넷 asnet Co.,Ltd.<br>
-        (04795)서울시 성동구 아차산로7나길 18 에이팩센터 301호&nbsp;<br>TEL:(02)476-8980&nbsp;FAX:(02)6280-8507&nbsp;EMAIL:help@asnet.co.kr
+        주식회사 에즈넷 asnet Co.,Ltd.<br />
+        (04795)서울시 성동구 아차산로7나길 18 에이팩센터 301호&nbsp;<br />TEL:(02)476-8980&nbsp;FAX:(02)6280-8507&nbsp;EMAIL:help@asnet.co.kr
         <a href="http://www.asnet.co.kr">asnet.co.kr</a>
       </div>
     </footer>

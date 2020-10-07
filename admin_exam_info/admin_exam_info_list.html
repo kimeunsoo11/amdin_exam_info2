@@ -12,15 +12,52 @@
     <title>시험정보 관리</title>
     <!-- header, side, footer, main CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet"> 
+    <!-- script -->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script type="text/javascript">
+      function admin_detail_view(){
+        location.href="/admin_exam_info/admin_exam_info_detail.html";
+      }
+      function exam_search(){
+        alert("검색 이벤트 발생!")
+      }
+    </script>
+    <style>
+      body{
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-light pt-2 bg-light">
+    
+    <nav class="navbar navbar-light shadow-sm p-2 bg-white">
       <a href="#" class="navbar-brand">OX퀴즈 관리자페이지</a>
-      <div class="navbar-text">사용자</div>
+      <div class="navbar-text">
+        <nav id="navbar-example2" class="navbar navbar-white bg-white">
+          <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="true">
+                <img src="/src/main/resources/static/images/3.jpg" alt="" style="border-radius:50%; width: 50px;" >
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#one">로그아웃</a>
+                <a class="dropdown-item" href="#two">마이페이지</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#three">음..</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        
+          </div>
+        </li>
+      </div>
     </nav>
     <div class="wrapper d-flex" style="height: 900px">
       <!--사이드바 내용-->
-      <div class="sidebar col-lg-2 d-block h-100 bg-dark">
+      <div class="sidebar col-sm-2 d-block h-100 bg-dark">
         <nav class="" id="sidebarMenu">
           <div class="sidebar pt-4 bg-dark">
             <ul class="nav flex-column">
@@ -28,7 +65,7 @@
                 <a class="nav-link text-white" href="#"> 사용자관리 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#"> 시험정보관리 </a>
+                <a class="nav-link text-white" href="/admin_exam_info/admin_exam_info_list.html"> 시험정보관리 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#"> 시험문제관리 </a>
@@ -59,7 +96,7 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <i class="fas fa-search" aria-hidden="true"></i>
+              <i class="fas fa-search" onclick="exam_search();" aria-hidden="true"></i>
             </form>
           </div>
           <div class="btn-bar">
@@ -76,7 +113,7 @@
             <th>시험내용</th>
             <th>등록일</th>
           </thead>
-          <tr>
+          <tr onclick="admin_detail_view()">
             <td>111</td>
             <td>홍길동</td>
             <td>2020-10-07</td>
@@ -84,7 +121,25 @@
             <td>etc</td>
           </tr>
         </table>
+        <div class="pagenation pt-3 float-right">
+        <nav aria-label="...">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+      </div>
+      
     </div>
     <!-- Footer -->
     <footer class="page-footer font-small bg-light pt-1">
@@ -94,5 +149,8 @@
         <a href="http://www.asnet.co.kr">asnet.co.kr</a>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   </body>
 </html>
