@@ -16,14 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet"> 
     <!-- script -->
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <script type="text/javascript">
-      function admin_detail_view(){
-        location.href="/admin_exam_info/admin_exam_info_detail.html";
-      }
-      function exam_search(){
-        alert("검색 이벤트 발생!")
-      }
-    </script>
+    <!-- icon -->
+    <link rel="stylesheet" href="/src/main/resources/static/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
       body{
         font-family: 'Noto Sans KR', sans-serif;
@@ -33,51 +27,52 @@
   <body>
     
     <nav class="navbar navbar-light shadow-sm p-2 bg-white">
-      <a href="#" class="navbar-brand">OX퀴즈 관리자페이지</a>
-      <div class="navbar-text">
-        <nav id="navbar-example2" class="navbar navbar-white bg-white">
+      <a href="/src/main/resources/static/templates/admin_exam_info/admin_exam_info_list.html" class="navbar-brand">OX퀴즈 관리자페이지</a>
           <ul class="nav nav-pills">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="true">
+              <a class="nav-link " data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="true">
                 <img src="/src/main/resources/static/images/3.jpg" alt="" style="border-radius:50%; width: 50px;" >
               </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#one">로그아웃</a>
-                <a class="dropdown-item" href="#two">마이페이지</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">로그아웃</a>
+                <a class="dropdown-item" href="#">마이페이지</a>
                 <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#three">음..</a>
+                <a class="dropdown-item" href="#">일정보기</a>
               </div>
             </li>
           </ul>
-        </nav>
-        
-          </div>
         </li>
       </div>
     </nav>
-    <div class="wrapper d-flex" style="height: 900px">
+    <div class="wrapper d-flex" style="height: 1200px">
       <!--사이드바 내용-->
       <div class="sidebar col-sm-2 d-block h-100 bg-dark">
         <nav class="" id="sidebarMenu">
           <div class="sidebar pt-4 bg-dark">
             <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"> 사용자관리 </a>
+              <li class="nav-item m-1">
+                <a class="nav-link text-white" href="#"><i class="fas fa-users"></i> &nbsp;사용자관리 <i class="fas fa-caret-right float-right mt-1"></i>
+                </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/admin_exam_info/admin_exam_info_list.html"> 시험정보관리 </a>
+              <li class="nav-item m-2">
+                <a class="nav-link text-white" href="/src/main/resources/static/templates/admin_exam_info/admin_exam_info_list.html"> <i class="fas fa-book"></i>&nbsp; 시험정보관리 
+                  <i class="fas fa-caret-right float-right mt-1"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"> 시험문제관리 </a>
+              <li class="nav-item m-2">
+                <a class="nav-link text-white" href="#"> <i class="fas fa-book-open"></i>&nbsp; 시험문제관리 
+                  <i class="fas fa-caret-right float-right mt-1"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"> OX퀴즈관리 </a>
+              <li class="nav-item m-2">
+                <a class="nav-link text-white" href="#"> <i class="fas fa-robot"></i>&nbsp; OX퀴즈관리 
+                  <i class="fas fa-caret-right float-right mt-1"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"> 건물관리 </a>
+              <li class="nav-item m-2">
+                <a class="nav-link text-white" href="#"> <i class="fas fa-building"></i>&nbsp; 건물관리 
+                  <i class="fas fa-caret-right float-right mt-1"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"> 퀘스트관리 </a>
+              <li class="nav-item m-2">
+                <a class="nav-link text-white" href="#"> <i class="far fa-question-circle"></i>&nbsp; 퀘스트관리 
+                  <i class="fas fa-caret-right float-right mt-1"></i></a>
               </li>
             </ul>
           </div>
@@ -87,7 +82,7 @@
       <div class="page-wrapper w-75 p-1 m-4 float-right d-block">
         <h2 class="main-title m-2">시험정보 관리</h2>
         <br />
-        <div class="btn-search-bar d-flex justify-content-between m-2">
+        <div class="btn-search-bar d-flex justify-content-between ">
           <div class="search-bar">
             <form class="form-inline d-flex md-form form-sm active-pink-2 mt-2">
               <input
@@ -96,16 +91,15 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <i class="fas fa-search" onclick="exam_search();" aria-hidden="true"></i>
+              <i class="fas fa-search" aria-hidden="true"></i>
             </form>
           </div>
-          <div class="btn-bar">
-            <button type="button" class="btn btn-dark m-1">등록</button>
-            <button type="button" class="btn btn-dark m-1">수정</button>
+          <div class="btn-bar float-right">
+            <button type="button" class="btn btn-dark m-1">시험정보 등록</button>
           </div>
         </div>
 
-        <table class="table table-striped m-1">
+        <table class="table table-striped ">
           <thead>
             <th>시험번호</th>
             <th>공시이름</th>
@@ -113,19 +107,19 @@
             <th>시험내용</th>
             <th>등록일</th>
           </thead>
-          <tr onclick="admin_detail_view()">
+          <tr>
             <td>111</td>
-            <td>홍길동</td>
+            <td><a href="/src/main/resources/static/templates/admin_exam_info/admin_exam_info_detail.html">홍길동</a></td>
             <td>2020-10-07</td>
             <td>한국사</td>
             <td>etc</td>
           </tr>
         </table>
-        <div class="pagenation pt-3 float-right">
-        <nav aria-label="...">
+        <div class="pagenation pt-3 float-left">
+        <nav>
           <ul class="pagination">
             <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">Previous</a>
+              <a class="page-link" href="#" tabindex="-1">이전</a>
             </li>
             <li class="page-item active"><a class="page-link" href="#">1</a></li>
             <li class="page-item">
@@ -133,7 +127,7 @@
             </li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-              <a class="page-link" href="#">Next</a>
+              <a class="page-link" href="#">다음</a>
             </li>
           </ul>
         </nav>
